@@ -4,20 +4,19 @@ import './index.css';
 import App from './App.tsx';
 import CandidateSearch from './pages/CandidateSearch';
 import SavedCandidates from './pages/SavedCandidates.tsx';
-import ErrorPage from './pages/ErrorPage.tsx';
+
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
-    errorElement: <ErrorPage />,
     children: [
       {
-        index: true,
+        path: "candidatesearch", 
         element: <CandidateSearch />,
       },
       {
-        path: '/SavedCandidates',
+        path: "savedcandidates", 
         element: <SavedCandidates />,
       },
     ],

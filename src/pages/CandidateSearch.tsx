@@ -16,7 +16,7 @@ const CandidateSearch: React.FC = () => {
         if (users.length > 0) {
           const userDetails = await searchGithubUser(users[0].login);
           const candidate: Candidate = {
-            name: userDetails.name,
+            name: userDetails.login,
             username: userDetails.login,  // Map login to username
             location: userDetails.location,
             avatar_url: userDetails.avatar_url,
